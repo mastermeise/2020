@@ -1,0 +1,77 @@
+$gap: 20px;
+
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: $gap;
+}
+
+.app {
+  padding: $gap;
+}
+
+.books {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-gap: $gap;
+
+
+  .book {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 9px 10px -10px rgba(0,0,0,0.50), -30px 25px 65px -10px rgba(0,0,0,0.30);
+    transition: box-shadow 0.3s ease;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.3s ease;
+    }
+    .title, .date {
+      display: none;
+
+    }
+    .score {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      //color: white;
+      font-size: 50px;
+      margin-top: 60%;
+      line-height: 200%;
+      transition: margin 0.3s ease;
+      opacity: 0;
+    }
+    &:before {
+      //This is setting the height proportionally.
+      padding-top: 150%;
+    }
+
+    &:hover, &:active {
+
+      box-shadow: 0 21px 30px -10px rgba(0,0,0,0.50), -30px 25px 65px -10px rgba(0,0,0,0.30);
+      img {
+        opacity: 0.25;
+      }
+      .score {
+        opacity: 1;
+        margin-top: 47.5%;
+      }
+    }
+  } // End Book
+
+
+
+
+}
