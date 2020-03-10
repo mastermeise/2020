@@ -9,6 +9,13 @@ h2 {
 .app {
   padding: 20px; }
 
+.json a {
+  display: inline-block;
+  margin-right: 20px; }
+
+section {
+  margin-bottom: 20px; }
+
 .books {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -30,32 +37,13 @@ h2 {
       width: 100%;
       height: 100%;
       -o-object-fit: cover;
-      object-fit: cover;
-      -webkit-transition: opacity 0.3s ease;
-      -o-transition: opacity 0.3s ease;
-      transition: opacity 0.3s ease; }
-    .books .book .title, .books .book .date {
-      display: none; }
+      object-fit: cover; }
+    .books .book .title,
+    .books .book .date,
     .books .book .score {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      text-align: center;
-      font-size: 50px;
-      margin-top: 60%;
-      line-height: 200%;
-      -webkit-transition: margin 0.3s ease;
-      -o-transition: margin 0.3s ease;
-      transition: margin 0.3s ease;
-      opacity: 0; }
+      display: none; }
     .books .book:before {
       padding-top: 150%; }
     .books .book:hover, .books .book:active {
       -webkit-box-shadow: 0 21px 30px -10px rgba(0, 0, 0, 0.5), -30px 25px 65px -10px rgba(0, 0, 0, 0.3);
       box-shadow: 0 21px 30px -10px rgba(0, 0, 0, 0.5), -30px 25px 65px -10px rgba(0, 0, 0, 0.3); }
-      .books .book:hover img, .books .book:active img {
-        opacity: 0.25; }
-      .books .book:hover .score, .books .book:active .score {
-        opacity: 1;
-        margin-top: 47.5%; }
